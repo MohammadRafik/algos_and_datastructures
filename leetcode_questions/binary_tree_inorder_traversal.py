@@ -6,14 +6,23 @@ class TreeNode:
         self.right = None
 
 class Solution:
-    sol_list = []
-    def inorderTraversal(self, root: TreeNode):
-        
+    def recursion(self, root: TreeNode):
         if root.left != None:
-            self.inorderTraversal(root.left)
-        self.sol_list.append(root.val)
+            yield from self.recursion(root.left)
+        yield root.val
         if root.right != None:
-            self.inorderTraversal(root.right)
+            yield from self.recursion(root.right)
+
+
+    def inorderTraversal(self, root: TreeNode):
+        sol = []
+        try:
+            for value in self.recursion(root):
+                sol.append(value)
+            return sol
+        except:
+            return []
+            
 
 
 node = TreeNode(44)
@@ -22,5 +31,4 @@ node.left = TreeNode(55)
 node.left.right = TreeNode(420)
 
 x = Solution()
-x.inorderTraversal(node)
-print(x.sol_list)
+print(x.inorderTraversal(node))

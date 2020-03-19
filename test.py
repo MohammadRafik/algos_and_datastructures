@@ -1,4 +1,10 @@
-lista = [3,4]
+def test_yield():
+    for x in range(3):
+        print('before yield')
+        yield x
+        print('after yield')
 
-lista.append(5)
-print(lista)
+for val in test_yield():
+    print(val)
+    if val == 2:
+        break
