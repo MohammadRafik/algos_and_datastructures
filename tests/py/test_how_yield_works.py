@@ -8,3 +8,7 @@ for val in test_yield():
     print(val)
     if val == 2:
         break
+
+
+if not 0:
+    print('hi not 0')
