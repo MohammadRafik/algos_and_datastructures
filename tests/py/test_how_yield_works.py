@@ -12,3 +12,7 @@ for val in test_yield():
 
 if not 0:
     print('hi not 0')
+
+import collections
+ans = collections.defaultdict(list)
+print(ans)
