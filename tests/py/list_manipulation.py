@@ -12,11 +12,13 @@ print(strobe[11])
 
 print(tuple_count)
 
-dict = { 1 : 'one', 2 : 'two' }  
+dict = { 1 : 'one', 2 : 'two', 'list': [1,2] }  
 tuple3 = tuple(dict) 
 print(tuple3) 
-
-# list_of_tuples = [(1,2), (3,4),(1,2)]
+dict['list'].append('appending to dict at 1')
+print(dict)
+print(dict['list'])
+# list_of_tuples = [(1,2), (3,4),(1,2)] 
 # dict2 = {}
 
 # for t in list_of_tuples:
