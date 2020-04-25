@@ -26,3 +26,6 @@ print(dict['list'])
 # print(dict2)
 list = 520
 print(list)
+
+
+print(max(1,2,3,4))
