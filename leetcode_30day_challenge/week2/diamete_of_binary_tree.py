@@ -7,12 +7,15 @@ class TreeNode:
 
 class Solution:
     def diameterOfBinaryTree(self, root: TreeNode) -> int:
-        
+        list_of_depths = []
 
 
-        def recursion(Node):
+        def recursion(Node, list = [0, 0]):
             if Node.left:
-                depth = recursion__(Node.left)
+                recursion(Node.left)
+            
+            if Node.right:
+                recursion(Node.right)
 
 
         def recursion__(Node):
